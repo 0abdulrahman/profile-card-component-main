@@ -26,10 +26,41 @@ body {
   align-items: center;
   flex-direction: column;
   background-color: hsl(185, 75%, 39%);
+  position: relative;
 }
 @media only screen and (max-width: 500px) {
   body {
     padding: 3em 2em;
+  }
+}
+body::before {
+  position: fixed;
+  content: "";
+  top: -50%;
+  left: -50%;
+  background: url("../../images/bg-pattern-top.svg") top/contain no-repeat;
+  width: -webkit-fill-available;
+  height: 100%;
+  z-index: -1;
+}
+@media only screen and (max-width: 500px) {
+  body::before {
+    transform: translate(-35%, 15%);
+  }
+}
+body::after {
+  position: fixed;
+  content: "";
+  bottom: -50%;
+  right: -50%;
+  background: url("../../images/bg-pattern-bottom.svg") bottom/contain no-repeat;
+  width: -webkit-fill-available;
+  height: 100%;
+  z-index: -1;
+}
+@media only screen and (max-width: 500px) {
+  body::after {
+    transform: translate(35%, -15%);
   }
 }
 body main {
@@ -39,6 +70,7 @@ body main {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
 }
 @media only screen and (max-width: 500px) {
   body main {

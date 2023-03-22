@@ -13,6 +13,34 @@ body {
   @include media("mobile") {
     padding: 3em 2em;
   }
+  position: relative;
+  &::before {
+    position: fixed;
+    content: "";
+    top: -50%;
+    left: -50%;
+    background: url("../../images/bg-pattern-top.svg") top/contain no-repeat;
+    width: -webkit-fill-available;
+    height: 100%;
+    z-index: -1;
+    @include media("mobile") {
+      transform: translate(-35%, 15%);
+    }
+  }
+  &::after {
+    position: fixed;
+    content: "";
+    bottom: -50%;
+    right: -50%;
+    background: url("../../images/bg-pattern-bottom.svg") bottom/contain
+      no-repeat;
+    width: -webkit-fill-available;
+    height: 100%;
+    z-index: -1;
+    @include media("mobile") {
+      transform: translate(35%, -15%);
+    }
+  }
   main {
     background-color: $white;
     min-width: 350px;
@@ -23,6 +51,7 @@ body {
     @include media("mobile") {
       min-width: 330px;
     }
+    box-shadow: 0 20px 70px $regular_shadow;
     h1 {
       position: absolute;
       width: 1px;
