@@ -19,7 +19,7 @@ body {
     content: "";
     top: -50%;
     left: -50%;
-    background: url("../../images/bg-pattern-top.svg") top/contain no-repeat;
+    background: url("../images/bg-pattern-top.svg") top/contain no-repeat;
     width: -webkit-fill-available;
     height: 100%;
     z-index: -1;
@@ -32,8 +32,7 @@ body {
     content: "";
     bottom: -50%;
     right: -50%;
-    background: url("../../images/bg-pattern-bottom.svg") bottom/contain
-      no-repeat;
+    background: url("../images/bg-pattern-bottom.svg") bottom/contain no-repeat;
     width: -webkit-fill-available;
     height: 100%;
     z-index: -1;
